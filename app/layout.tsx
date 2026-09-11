@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+const siteUrl = "https://portfolio-site-eta-plum-28.vercel.app";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -13,8 +15,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Myles B. Scott | Backend Engineer \u2014 Financial Systems & AI",
   description: "Backend engineer building real-time financial infrastructure and applied AI at USAA. Java, Spring Boot, Kafka, and LLM integration in regulated environments.",
+  openGraph: {
+    title: "Myles B. Scott | Backend Engineer \u2014 Financial Systems & AI",
+    description: "Backend engineer building real-time financial infrastructure and applied AI at USAA.",
+    images: ["/og-image.svg"],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
