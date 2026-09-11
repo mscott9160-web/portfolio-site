@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const siteUrl = "https://portfolio-site-eta-plum-28.vercel.app";
+const siteUrl = "https://myles-scott-portfolio.vercel.app";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Myles B. Scott | Backend Engineer \u2014 Financial Systems & AI",
     description: "Backend engineer building real-time financial infrastructure and applied AI at USAA.",
-    images: ["/og-image.svg"],
+    images: ["/og-image.png"],
   },
 };
 

@@ -1,8 +1,8 @@
 # Portfolio Site
 
-Personal portfolio for Myles B. Scott — a backend engineer working on financial systems and applied AI.
+Personal portfolio for Myles B. Scott - a backend engineer working on financial systems and applied AI.
 
-**Live:** [portfolio-site-eta-plum-28.vercel.app](https://portfolio-site-eta-plum-28.vercel.app)
+**Live:** [myles-scott-portfolio.vercel.app](https://myles-scott-portfolio.vercel.app)
 
 ## What this is
 
