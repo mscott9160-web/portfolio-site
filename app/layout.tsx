@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Myles B. Scott | Backend Engineer — Financial Systems & AI",
+  title: "Myles B. Scott | Backend Engineer \u2014 Financial Systems & AI",
   description: "Backend engineer building real-time financial infrastructure and applied AI at USAA. Java, Spring Boot, Kafka, and LLM integration in regulated environments.",
 };
 
