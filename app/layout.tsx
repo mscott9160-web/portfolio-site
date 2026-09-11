@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Myles B. Scott | Software Engineer",
-  description: "Portfolio of Myles B. Scott, a software engineer and product-minded builder creating useful web and mobile products.",
+  title: "Myles B. Scott | Backend Engineer — Financial Systems & AI",
+  description: "Backend engineer building real-time financial infrastructure and applied AI at USAA. Java, Spring Boot, Kafka, and LLM integration in regulated environments.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
