@@ -12,9 +12,18 @@ type Project = {
 };
 
 const projects: Record<string, Project> = {
+  arbiter: {
+    title: "Arbiter",
+    category: "01 / AI Infrastructure",
+    problem: "Most teams adopting LLMs have no per-request view of what they are spending. Cost shows up as a monthly invoice with no breakdown by tenant, feature, or model, and by then the decisions that drove it are weeks old. Arbiter treats inference spend as something to be measured at the point of use and recorded in a ledger, the same way a financial system would.",
+    decision: "A Java 21 Spring Boot gateway sits in front of inference. Each request is classified for complexity by a Python FastAPI sidecar, routed to a model tier, checked against a tenant-scoped exact cache and an opt-in semantic cache, and then recorded as a ledger entry with its computed cost. The two services communicate over a versioned HTTP contract defined in OpenAPI, with ledger events validated against a JSON Schema. Cost calculation is fail-closed: an unknown model raises an error rather than defaulting to zero.",
+    stack: "Java 21 · Spring Boot · Python · FastAPI · PostgreSQL (pgvector) · Redis · OpenAPI · JSON Schema",
+    repo: "https://github.com/mscott9160-web/arbiter",
+    status: "Early stage. The completion provider is a stub and embeddings are deterministic placeholders; the routing, caching, cost, and ledger paths are implemented and tested.",
+  },
   "cash-flow-simulator": {
     title: "Cash Flow Simulator",
-    category: "01 / Fintech",
+    category: "02 / Fintech",
     problem: "Monthly budgets hide timing risk. Cash Flow Simulator projects daily balances over 90 days and identifies the events behind negative-balance days.",
     decision: "Keep financial rules in a pure-Python projection and optimizer core, then expose one versioned API contract to both the React web client and Expo mobile client.",
     stack: "Python · FastAPI · Pydantic · React · TypeScript · PostgreSQL · Expo",
@@ -23,7 +32,7 @@ const projects: Record<string, Project> = {
   },
   "fade-society": {
     title: "Fade Society",
-    category: "02 / Marketplace",
+    category: "03 / Marketplace",
     problem: "A barber marketplace needs distinct experiences for customers, barbers, studio owners, and platform administrators, while preventing two customers from claiming the same appointment.",
     decision: "Model booking state transitions explicitly and put server-ready writes behind a transactional PostgreSQL RPC with idempotency protection.",
     stack: "TypeScript · React Native · Expo · Supabase · PostgreSQL",
@@ -32,7 +41,7 @@ const projects: Record<string, Project> = {
   },
   "sneaker-signal": {
     title: "Sneaker Signal",
-    category: "03 / Data",
+    category: "04 / Data",
     problem: "Sneaker release information is scattered across brand calendars, retailer pages, raffles, and editorial coverage, with uneven confidence and freshness.",
     decision: "Treat source quality as part of the data model through source hierarchy, verification states, editorial status, and row-level security over Supabase.",
     stack: "React · TypeScript · Vite · Supabase · PostgreSQL",
