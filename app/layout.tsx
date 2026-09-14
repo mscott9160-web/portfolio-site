@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description: "Backend engineer building real-time financial infrastructure and applied AI at USAA. Java, Spring Boot, Kafka, and LLM integration in regulated environments.",
   openGraph: {
     title: "Myles B. Scott | Backend Engineer \u2014 Financial Systems & AI",
-    description: "Backend engineer building real-time financial infrastructure and applied AI at USAA.",
+    description: "Backend engineer building real-time financial infrastructure and applied AI at USAA. Java, Spring Boot, Kafka, and LLM integration in regulated environments.",
     images: ["/og-image.png"],
   },
 };
