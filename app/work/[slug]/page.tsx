@@ -34,7 +34,7 @@ const projects: Record<string, Project> = {
     title: "Fade Society",
     category: "03 / Marketplace",
     problem: "A barber marketplace needs distinct experiences for customers, barbers, studio owners, and platform administrators, while preventing two customers from claiming the same appointment.",
-    decision: "Model booking state transitions explicitly and put server-ready writes behind a transactional PostgreSQL RPC with idempotency protection.",
+    decision: "Double-booking is a concurrency problem, not a UI problem. The prototype models booking state transitions explicitly and enforces conflict prevention in typed domain logic against local state. The production path is designed rather than running: a PostgreSQL schema with a transactional booking routine and an idempotency key, so a retried request cannot create a duplicate appointment. Repository interfaces separate the domain from storage specifically so that swap is a backend change, not a rewrite.",
     stack: "TypeScript · React Native · Expo · Supabase · PostgreSQL",
     repo: "https://github.com/mscott9160-web/fade-society",
     status: "Demo and architecture foundation, not a live production marketplace.",
@@ -42,7 +42,7 @@ const projects: Record<string, Project> = {
   "sneaker-signal": {
     title: "Sneaker Signal",
     category: "04 / Data",
-    problem: "Sneaker release information is scattered across brand calendars, retailer pages, raffles, and editorial coverage, with uneven confidence and freshness.",
+    problem: "How do you represent conflicting release information from sources with unequal credibility? Sneaker release information is scattered across brand calendars, retailer pages, raffles, and editorial coverage, with uneven confidence and freshness.",
     decision: "Treat source quality as part of the data model through source hierarchy, verification states, editorial status, and row-level security over Supabase.",
     stack: "React · TypeScript · Vite · Supabase · PostgreSQL",
     repo: "https://github.com/mscott9160-web/sneaker-signal",
