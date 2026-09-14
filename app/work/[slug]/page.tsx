@@ -130,10 +130,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const project = projects[slug];
   if (!project) return {};
-  const openingSentence = project.problem.split(". ")[0];
-  const description = openingSentence.length > 160
-    ? `${openingSentence.slice(0, 157).trimEnd()}...`
-    : openingSentence;
+  const description = project.problem.length > 160
+    ? `${project.problem.slice(0, 157).trimEnd()}...`
+    : project.problem;
   return {
     title: project.metadataTitle,
     description,
