@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+.detail-section { margin-top: 70px; }
+.detail-meta { display: grid; gap: 18px; margin: 36px 0 40px; }
+.detail-meta span { border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; line-height: 1.5; padding-top: 13px; }
+.diagram-frame { background: var(--background); border: 1px solid var(--line); margin: 42px 0 28px; overflow-x: auto; padding: 22px 12px; }
+.diagram-svg { min-width: 0; text-align: center; }
+.diagram-svg svg { height: auto; max-width: 100%; width: 100%; }
+.diagram-loading { height: 220px; }
+.diagram-caption { color: var(--muted); font-size: 13px !important; line-height: 1.55 !important; margin: -8px 0 28px !important; }
+.detail-callout { border-left: 3px solid var(--blue); margin: 32px 0; padding: 4px 0 4px 20px; }
+.detail-callout ul, .also-built ul { color: var(--muted); font-size: 14px; line-height: 1.6; margin: 14px 0 0; padding-left: 20px; }
+.detail-callout li, .also-built li { margin-bottom: 8px; }
+.also-built { border-top: 1px solid var(--line); margin-top: 38px; padding-top: 30px; }
+.also-built h3 { font-size: 30px; }
+
 .project-card > div:last-child { column-gap: 14px; display: grid; flex: 1; grid-template-columns: 1fr 1fr; grid-template-rows: minmax(86px, auto) auto auto 1fr; }
 .project-card h3 { grid-column: 1 / -1; }
 .project-card > div:last-child > p { grid-column: 1 / -1; }
