@@ -52,6 +52,34 @@ const projects: Record<string, Project> = {
       "27 tests across the gateway, plus a Python suite for the classifier",
     ],
   },
+  achlens: {
+    title: "achlens",
+    category: "02 / Payments",
+    problem: "An ACH file is 94 characters per line with no delimiters, and a single wrong offset invalidates a batch. achlens reads those records, validates structure and control totals, and explains failures instead of throwing them.",
+    decision: "The design splits a tolerant parser from a strict validator. The parser accepts what it is given and records what it could not understand; the validator decides whether the result is acceptable. That means a broken file still produces a diagnosis rather than a stack trace, which is the entire point when the thing you are debugging is a payment batch.",
+    stack: "Python · MCP · pytest · uv",
+    repo: "https://github.com/mscott9160-web/achlens",
+    status: "Synthetic data only; it is not a bank gateway.",
+    metadataTitle: "achlens — local-first ACH inspection | Myles B. Scott",
+    diagramLabel: "achlens inspection boundaries",
+    diagram: `flowchart TD
+      F[ACH file content] --> P[Tolerant parser]
+      P --> V[Strict validator]
+      V --> D[Readable diagnosis]
+      V --> R[Derived-control repair]
+      D --> M[Sensitive fields masked by default]
+      M --> C[MCP and CLI output]\n`,
+    failSafe: [
+      "Sensitive fields are masked by default; reveal requires an explicit environment flag",
+      "MCP filesystem access is disabled until an allowed root is configured",
+      "The tool runs locally and never transmits an ACH file",
+    ],
+    alsoBuilt: [
+      "Ten SEC codes and deterministic synthetic files for testing",
+      "194 tests and eight architecture decision records",
+      "Control-total validation and derived-control repair",
+    ],
+  },
   "cash-flow-simulator": {
     title: "Cash Flow Simulator",
     category: "02 / Fintech",
