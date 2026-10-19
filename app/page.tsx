@@ -100,7 +100,30 @@ export default function Home() {
           </article>
           <article className="project-card project-ink">
             <div className="project-top">
-              <span>02 / Fintech</span>
+              <span>02 / Payments</span>
+              <span>↗</span>
+            </div>
+            <div>
+              <h3>
+                Reading a payment file that refuses to <em>explain itself.</em>
+              </h3>
+              <p>
+                ACH files are fixed-width, unforgiving, and silent about what went wrong. Achlens
+                parses them, checks the control totals, and says in plain language which field broke
+                and where. It runs entirely on your machine and never sends a file anywhere.
+              </p>
+              <p>Python · MCP · pytest · uv</p>
+              <Link href="/work/achlens">
+                Read more <span>↗</span>
+              </Link>{" "}
+              <a href="https://github.com/mscott9160-web/achlens" target="_blank" rel="noreferrer">
+                View code <span>↗</span>
+              </a>
+            </div>
+          </article>
+          <article className="project-card project-blue">
+            <div className="project-top">
+              <span>03 / Fintech</span>
               <span>↗</span>
             </div>
             <div>
@@ -127,9 +150,9 @@ export default function Home() {
               </a>
             </div>
           </article>
-          <article className="project-card project-blue">
+          <article className="project-card project-ink">
             <div className="project-top">
-              <span>03 / Marketplace</span>
+              <span>04 / Marketplace</span>
               <span>↗</span>
             </div>
             <div>
@@ -156,9 +179,9 @@ export default function Home() {
               </a>
             </div>
           </article>
-          <article className="project-card project-ink">
+          <article className="project-card project-blue">
             <div className="project-top">
-              <span>04 / Data</span>
+              <span>05 / Data</span>
               <span>↗</span>
             </div>
             <div>
@@ -178,29 +201,6 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
               >
-                View code <span>↗</span>
-              </a>
-            </div>
-          </article>
-          <article className="project-card project-blue">
-            <div className="project-top">
-              <span>05 / Payments</span>
-              <span>↗</span>
-            </div>
-            <div>
-              <h3>
-                Reading a payment file that refuses to <em>explain itself.</em>
-              </h3>
-              <p>
-                ACH files are fixed-width, unforgiving, and silent about what went wrong. achlens
-                parses them, checks the control totals, and says in plain language which field broke
-                and where. It runs entirely on your machine and never sends a file anywhere.
-              </p>
-              <p>Python · MCP · pytest · uv</p>
-              <Link href="/work/achlens">
-                Read more <span>↗</span>
-              </Link>{" "}
-              <a href="https://github.com/mscott9160-web/achlens" target="_blank" rel="noreferrer">
                 View code <span>↗</span>
               </a>
             </div>

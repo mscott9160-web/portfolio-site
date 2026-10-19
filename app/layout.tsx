@@ -3,6 +3,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const siteUrl = "https://myles-scott-portfolio.vercel.app";
+const pageTitle = "Myles B. Scott | Backend Engineer \u2014 Financial Systems & AI";
+const pageDescription =
+  "Backend engineer building real-time financial infrastructure and applied AI at USAA. " +
+  "Java, Spring Boot, Kafka, and LLM integration in regulated environments.";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,13 +20,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Myles B. Scott | Backend Engineer \u2014 Financial Systems & AI",
-  description:
-    "Backend engineer building real-time financial infrastructure and applied AI at USAA. Java, Spring Boot, Kafka, and LLM integration in regulated environments.",
+  title: pageTitle,
+  description: pageDescription,
   openGraph: {
-    title: "Myles B. Scott | Backend Engineer \u2014 Financial Systems & AI",
-    description:
-      "Backend engineer building real-time financial infrastructure and applied AI at USAA. Java, Spring Boot, Kafka, and LLM integration in regulated environments.",
+    title: pageTitle,
+    description: pageDescription,
     images: ["/og-image.png"],
   },
 };
