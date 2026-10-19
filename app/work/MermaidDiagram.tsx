@@ -44,7 +44,11 @@ export default function MermaidDiagram({ chart, label }: MermaidDiagramProps) {
 
   return (
     <div className="diagram-frame" aria-label={label}>
-      {svg ? <div className="diagram-svg" dangerouslySetInnerHTML={{ __html: svg }} /> : <div className="diagram-loading" aria-hidden="true" />}
+      {svg ? (
+        <div className="diagram-svg" dangerouslySetInnerHTML={{ __html: svg }} />
+      ) : (
+        <div className="diagram-loading" aria-hidden="true" />
+      )}
     </div>
   );
 }

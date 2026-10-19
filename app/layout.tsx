@@ -17,20 +17,19 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Myles B. Scott | Backend Engineer \u2014 Financial Systems & AI",
-  description: "Backend engineer building real-time financial infrastructure and applied AI at USAA. Java, Spring Boot, Kafka, and LLM integration in regulated environments.",
+  description:
+    "Backend engineer building real-time financial infrastructure and applied AI at USAA. Java, Spring Boot, Kafka, and LLM integration in regulated environments.",
   openGraph: {
     title: "Myles B. Scott | Backend Engineer \u2014 Financial Systems & AI",
-    description: "Backend engineer building real-time financial infrastructure and applied AI at USAA. Java, Spring Boot, Kafka, and LLM integration in regulated environments.",
+    description:
+      "Backend engineer building real-time financial infrastructure and applied AI at USAA. Java, Spring Boot, Kafka, and LLM integration in regulated environments.",
     images: ["/og-image.png"],
   },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
