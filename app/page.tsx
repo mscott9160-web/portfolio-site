@@ -26,7 +26,8 @@ export default function Home() {
           <p className="lede">
             Myles B. Scott — backend engineer working on financial infrastructure and applied AI. I
             lead backend development on the platform that replaced my employer&apos;s legacy batch
-            accounting with real-time, event-driven services.
+            accounting with real-time, event-driven services, and established API standards as its
+            first API engineer.
           </p>
           <p className="lede">
             I&apos;m interested in what happens when AI moves from experimentation into systems
@@ -220,13 +221,15 @@ export default function Home() {
           <p>
             I&apos;m a Software Engineer III at USAA on the financial accounting team. I lead
             backend development on real-time, event-driven services with Java, Spring Boot, Apache
-            Kafka, enterprise general-ledger platforms, and enterprise compliance controls baked
-            into every path.
+            Kafka, Oracle Cloud GL, and enterprise compliance controls baked into every path. I
+            build bidirectional financial APIs and self-service onboarding workflows for new GL
+            source systems.
           </p>
           <p>
             Most of my recent work is AI in places where it has to be careful: open-source LLMs in
             accounting services and CI/CD pipelines, a multi-agent development framework modeling a
-            full scrum team, and read-only MCP integrations over enterprise financial APIs.
+            full scrum team, a read-only MCP server over enterprise financial APIs, and internal
+            tooling that helps teams adopt agent frameworks, prompts, and skills responsibly.
           </p>
           <p className="eyebrow">
             Also exploring — agent evaluation, cost attribution for inference, and where retrieval
@@ -234,8 +237,8 @@ export default function Home() {
           </p>
           <div className="skills">
             <span>Java &amp; Spring Boot</span>
-            <span>Event-driven architecture</span>
-            <span>Financial systems</span>
+            <span>Kafka &amp; Oracle Cloud</span>
+            <span>Financial APIs &amp; controls</span>
             <span>LLM integration &amp; MCP</span>
           </div>
           <p className="eyebrow">
